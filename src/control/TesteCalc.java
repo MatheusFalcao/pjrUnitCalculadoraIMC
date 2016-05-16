@@ -17,7 +17,7 @@ public class TesteCalc {
 	
 	@Test
 	public void calcIMC(){
-		Assert.assertEquals(21.60, c.calcIMC(70.00, 1.80));	
+		Assert.assertEquals(21.6, c.calcIMC(70, 1.80));	
 	}
 	
 	@Test

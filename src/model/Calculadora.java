@@ -1,11 +1,15 @@
 package model;
 
+import java.text.DecimalFormat;
+
 public class Calculadora {
 	
 	public double calcIMC(double peso, double altura){
-		 
+		DecimalFormat df = new DecimalFormat("#.##");
+		
 		altura *= altura;
-		return peso / altura;
+		
+		return Double.parseDouble( df.format(peso / altura).replaceAll( "," , "." ) );
 	
 	}
 	
