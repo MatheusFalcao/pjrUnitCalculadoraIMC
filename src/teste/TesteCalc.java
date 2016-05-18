@@ -1,18 +1,18 @@
-package control;
+package teste;
 
 import org.junit.Before;
 import org.junit.Test;
 
+import control.CalculadoraIMC;
 import junit.framework.Assert;
-import model.Calculadora;
 
 public class TesteCalc {
 	
-	Calculadora c;
+	CalculadoraIMC c;
 	
 	@Before
 	public void setup(){
-		c = new Calculadora();
+		c = new CalculadoraIMC();
 	}
 	
 	@Test

@@ -1,13 +1,13 @@
-package control;
+package teste;
 
-import model.Calculadora;
+import control.CalculadoraIMC;
 
 public class Programa {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Calculadora c = new Calculadora();
+		CalculadoraIMC c = new CalculadoraIMC();
 		
 		System.out.println(c.calcIMC(70, 1.80));
 	}
