@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 public class CalculadoraIMC {
 	
 	public String calcularIMC(String sexo,double altura, double peso, int idade){
-		//calculo do IMC da pessoa
+		//calculo do IMC da pessoao
 		DecimalFormat df = new DecimalFormat("#.##");
 		altura *= altura;
 		double imc = Double.parseDouble( df.format(peso / altura).replaceAll( "," , "." ));
