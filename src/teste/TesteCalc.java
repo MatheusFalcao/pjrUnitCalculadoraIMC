@@ -42,19 +42,24 @@ public class TesteCalc {
 
 	@Test
 	public void TestAdultoObesidadeGrauUm(){
-		Assert.assertEquals("OBESIDADE GRAU I", c.calcularIMC("masculino", 1.60, 78., 64));
+		Assert.assertEquals("OBESIDADE GRAVE I", c.calcularIMC("masculino", 1.60, 78., 64));
 	}
 
 	@Test
 	public void TestAdultoObesidadeGrauDois(){
-		Assert.assertEquals("OBESIDADE GRAU II ", c.calcularIMC("masculino", 1.70, 102., 64));
+		Assert.assertEquals("OBESIDADE GRAVE II", c.calcularIMC("masculino", 1.70, 102., 64));
 	}
 	
 	@Test
 	public void TestAdultoObesidadeGrauTres(){
-		Assert.assertEquals("OBESIDADE GRAU II I", c.calcularIMC("masculino", 1.70, 120., 21));
+		Assert.assertEquals("OBESIDADE GRAVE III (OBESIDADE MÓRBIDA)", c.calcularIMC("masculino", 1.70, 120., 21));
 	}
 
+	/*
+	 * IDOSO
+	 */
+	
+	
 	@Test
 	public void TestIdosoFemininoBaixoPeso(){
 		Assert.assertEquals("BAIXO PESO", c.calcularIMC("feminino", 1.70, 60., 66));
@@ -72,17 +77,17 @@ public class TesteCalc {
 	
 	@Test
 	public void TestIdosoFemininoObesidadeGrauUm(){
-		Assert.assertEquals("OBESIDADE GRAU I", c.calcularIMC("feminino", 1.60, 84., 66));
+		Assert.assertEquals("OBESIDADE GRAVE I", c.calcularIMC("feminino", 1.60, 84., 66));
 	}	
 	
 	@Test
 	public void TestIdosoFemininoObesidadeGrauDois(){
-		Assert.assertEquals("OBESIDADE GRAU II ", c.calcularIMC("feminino", 1.60, 97., 66));
+		Assert.assertEquals("OBESIDADE GRAVE II", c.calcularIMC("feminino", 1.60, 97., 66));
 	}
 	
 	@Test
 	public void TestIdosoFemininoObesidadeGrauTres(){
-		Assert.assertEquals("OBESIDADE GRAU II I", c.calcularIMC("feminino", 1.70, 123., 66));
+		Assert.assertEquals("OBESIDADE GRAVE III (OBESIDADE MÓRBIDA)", c.calcularIMC("feminino", 1.70, 123., 66));
 	}	
 	
 	@Test
@@ -102,19 +107,21 @@ public class TesteCalc {
 	
 	@Test
 	public void TestIdosoMasculinoObesidadeGrauUm(){
-		Assert.assertEquals("OBESIDADE GRAU I", c.calcularIMC("masculino", 1.70, 90., 66));
+		Assert.assertEquals("OBESIDADE GRAVE I", c.calcularIMC("masculino", 1.70, 90., 66));
 	}	
 	
 	@Test
 	public void TestIdosoMasculinoObesidadeGrauDois(){
-		Assert.assertEquals("OBESIDADE GRAU II ", c.calcularIMC("masculino", 1.70, 104., 66));
+		Assert.assertEquals("OBESIDADE GRAVE II", c.calcularIMC("masculino", 1.70, 104., 66));
 	}
 	
 	@Test
 	public void TestIdosoMasculinoObesidadeGrauTres(){
-		Assert.assertEquals("OBESIDADE GRAU II I", c.calcularIMC("masculino", 1.70, 120., 66));
+		Assert.assertEquals("OBESIDADE GRAVE III (OBESIDADE MÓRBIDA)", c.calcularIMC("masculino", 1.70, 120., 66));
 	}	
 
+	
+	
 	@Test
 	public void TestCriancaDoisAnosFemininoBaixoPeso(){
 		Assert.assertEquals("BAIXO PESO", c.calcularIMC("feminino", 1., 14., 2));
@@ -267,7 +274,7 @@ public class TesteCalc {
 	
 	@Test
 	public void TestCriancaDezesseisAnosFemininoSobrepeso(){
-		Assert.assertEquals("SOBREPESO", c.calcularIMC("feminino", 1.55, 59., 16));
+		Assert.assertEquals("SOBREPESO", c.calcularIMC("feminino", 1.55, 68., 16));
 	}
 	
 	@Test
@@ -317,6 +324,7 @@ public class TesteCalc {
 
 
 	//---------MASCULINO CRIANÇA-----------//
+	
 	@Test
 	public void TestCriancaDoisAnosMasculinoBaixoPeso(){
 		Assert.assertEquals("BAIXO PESO", c.calcularIMC("masculino", 1., 14.5, 2));
